@@ -1,0 +1,29 @@
+
+
+.btn-custom {
+ height: 2.5rem !important;
+}
+
+.btn-custom-sm {
+ height: 1.5rem !important;
+}
+
+.bg-main {
+ background: rgb(189, 189, 189) !important;
+}
+
+.bg-gray {
+ background: #ddd;
+}
+
+.v-overlay__scrim {
+ opacity: 0.6;
+}
+
+.dialog-card {
+ margin: 0 auto;
+ width: 300px;
+ @media (min-width: 600px) {
+  width: 550px;
+ }
+}

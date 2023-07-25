@@ -1,0 +1,20 @@
+{
+    "extends": ["plugin:vue/base", "eslint:recommended", "@vue/prettier"],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser",
+      "ecmaVersion": 8,
+      "sourceType": "module",
+      "requireConfigFile": false,
+      "babelOptions": {
+        "parserOpts": {
+          "plugins": ["jsx"]
+        }
+      }
+    },
+    "rules": {
+      "semi": ["error", "always"],
+      "no-console": "off",
+      "quotes": 2
+    }
+  }
+  

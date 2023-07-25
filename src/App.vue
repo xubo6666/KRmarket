@@ -102,7 +102,8 @@
       app
       fixed
       color="indigo-darken-4"
-      class="flex justify-space-around hight=30px">
+      class="flex justify-space-around"
+    >
       <v-btn variant="text" class="text-caption" :to="{ name: 'home' }">
         <v-icon icon="mdi-home-outline" color="blue-grey-lighten-4" />
         {{ t("footerPanel.home") }}
@@ -129,7 +130,7 @@ export default {
   setup() {
     const { t, locale } = useI18n();
 
-    watch(locale, (newLocale) => {
+    watch(locale, newLocale => {
       localStorage.setItem("locale", newLocale);
     });
 

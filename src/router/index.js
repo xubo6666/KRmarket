@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/components/Home.vue";
+import Account from "@/components/Account.vue";
+import Level from "@/components/product/Level.vue";
 import Login from "@/components/auth/Login.vue";
 import Help from "@/components/help/help.vue";
 import Community from "@/components/help/community.vue";
-import privacyPolicy from "@/components/help/privacyPolicy.vue";
-import termsofService from "@/components/help/TermsofService.vue";
+import PrivacyPolicy from "@/components/help/PrivacyPolicy.vue";
+import TermsofService from "@/components/help/TermsofService.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,6 +15,16 @@ const router = createRouter({
       path: "/",
       component: Home,
       name: "home",
+    },
+    {
+      path: "/account",
+      component: Account,
+      name: "account",
+    },
+    {
+      path: "/level",
+      component: Level,
+      name: "level",
     },
     {
       path: "/login",
@@ -31,12 +43,12 @@ const router = createRouter({
     },
     {
       path: "/privacyPolicy",
-      component: privacyPolicy,
+      component: PrivacyPolicy,
       name: "privacyPolicy",
     },
     {
       path: "/termsofService",
-      component: termsofService,
+      component: TermsofService,
       name: "termsofService",
     },
   ],

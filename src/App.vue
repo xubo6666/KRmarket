@@ -109,7 +109,7 @@
         {{ t("footerPanel.home") }}
       </v-btn>
 
-      <!-- <v-btn variant="text" class="text-caption" :to="{ name: 'product' }"
+      <v-btn variant="text" class="text-caption" :to="{ name: 'level' }"
         ><v-icon icon="mdi-magnify" color="blue-grey-lighten-4" />
         {{ t("footerPanel.explore") }}
       </v-btn>
@@ -117,7 +117,7 @@
       <v-btn variant="text" class="text-caption" :to="{ name: 'account' }"
         ><v-icon icon="mdi-account-outline" color="blue-grey-lighten-4" />
         {{ t("footerPanel.account") }}
-      </v-btn> -->
+      </v-btn>
     </v-footer>
   </v-app>
 </template>
@@ -158,20 +158,6 @@ export default {
       videoOut: false,
       welcomeOut: false,
       windowWidth: window.innerWidth,
-    };
-  },
-
-  created() {
-    // 禁止页面缩放
-    window.onload = function () {
-      document.addEventListener("touchstart", function (event) {
-        if (event.touches.length > 1) {
-          event.preventDefault();
-        }
-      });
-      document.addEventListener("gesturestart", function (event) {
-        event.preventDefault();
-      });
     };
   },
 };

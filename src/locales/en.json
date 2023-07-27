@@ -31,6 +31,16 @@
     "button-title-3": "Terms of service",
     "button-title-4": "Privacy policy"
   },
+  "loan": {
+    "title": "Apply for a loan",
+    "duration": "Duration",
+    "amount": "Amount",
+    "transactionId": "Transaction Pin",
+    "disclaimer": "Dear NFT users: Please contact your dedicated customer service, otherwise your application may be rejected, thank you.",
+    "agreement": "In the principle of equality and willingness, honesty and integrity, and mutual agreement, both parties agreed on a high amount of loan contract and guarantee to comply:<br \\>1、Loan amount: Party B borrow from Party A.<br \\>2. Loan interest: The monthly interest rate of the loan is 0.00%.<br \\>3. Loan term: (2022-11-19) to (2022-12-19), subject to the time agreed in the contract, to ensure good credit.<br \\>4. Party A will transfer Thai ETH to Party B's NFT account through the platform ID.<br \\>5. Warranty terms.<br \\>1. Borrower shall not withdraw the funds to any illegal arbitrage place before repayment.<br \\>2. Borrower must not repay the loan with the loan funds, illegal.<br \\>3. Borrowers must repay the loan within the contracted period. For the overdue part, the borrower has the right to recover the loan and pursue criminal liability.<br \\>VI. Liability for breach of contract.<br \\>1. If Party B does not repay the loan as agreed in the contract, it will seriously infringe the interests of the platform and will be held legally and criminally liable.<br \\>2. According to the provisions of the NFT meta-universe, the lender assumes the risk of the borrower's guaranteed loan and is required to verify the borrower's personal minimum repayment capacity. If they do not perform as agreed in the contract, the company will regard them as serious intentional loan fraud and file a lawsuit directly to the NFT, which will be punished severely according to the law.<br \\>7. Loan reserve<br \\>1. According to the NFT lending contract, the invitation to credit score lending is to ensure good personal credit, while ensuring that people who join the NFT Yuan universe earnings, so that the lending amount will be higher and higher. Payment will be completed soon.<br \\>2. Borrowers must make repayment by depositing Thai ETH into your personal official NFT wallet.",
+    "agree": "I agree",
+    "submit": "Loan"
+  },
   "help": {
     "help": "Help",
     "title-1": "Financial Field Program Description",

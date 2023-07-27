@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/components/Home.vue";
+import Loan from "@/components/Loan.vue";
 import Account from "@/components/Account.vue";
 import Level from "@/components/product/Level.vue";
 import Login from "@/components/auth/Login.vue";
@@ -25,6 +26,11 @@ const router = createRouter({
       path: "/level",
       component: Level,
       name: "level",
+    },
+    {
+      path: "/loan",
+      component: Loan,
+      name: "loan",
     },
     {
       path: "/login",

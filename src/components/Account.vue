@@ -85,7 +85,7 @@
           </v-btn>
         </v-col>
         <v-col cols="4">
-          <v-btn variant="text" size="large"
+          <v-btn variant="text" size="large" :to="{ name: 'withdraw' }"
             ><v-icon
               icon="mdi-exit-to-app"
               style="color: orange; font-size: 25px; position: absolute"
@@ -94,7 +94,7 @@
           </v-btn>
         </v-col>
         <v-col cols="4">
-          <v-btn variant="text" size="large"
+          <v-btn variant="text" size="large" :to="{ name: 'duedate' }"
             ><v-icon
               icon="mdi-cash-clock"
               style="color: orange; font-size: 25px; position: absolute"
@@ -103,7 +103,7 @@
           </v-btn>
         </v-col>
         <v-col cols="4">
-          <v-btn variant="text" size="large"
+          <v-btn variant="text" size="large" :to="{ name: 'loan' }"
             ><v-icon
               icon="mdi-hand-coin-outline"
               style="color: orange; font-size: 25px; position: absolute"

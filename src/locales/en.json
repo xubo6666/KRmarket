@@ -262,6 +262,9 @@
     "community": " Community Guidelines",
     "help": "Help",
     "account": "Account",
-    "level": "Level"
+    "level": "Level",
+    "loan": "Loan",
+    "duedate": "DueDate",
+    "withdraw": "Withdraw"
   }
 }

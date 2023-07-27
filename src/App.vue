@@ -1,7 +1,7 @@
 <template>
   <v-app id="v-app">
     <v-app-bar flat color="indigo-darken-4">
-      <v-btn style="height: 30px" @click="$router.go(-1)">
+      <v-btn @click="$router.go(-1)">
         <v-icon size="15">mdi-arrow-left-circle-outline t</v-icon>
       </v-btn>
 
@@ -11,7 +11,7 @@
       </div>
 
       <!-- Dropdown menu -->
-      <!-- <template v-slot:append>
+      <template v-slot:append>
         <v-btn id="menu-activator" color="blue-grey-lighten-4">
           <v-icon size="20">mdi-dots-vertical</v-icon>
         </v-btn>
@@ -23,7 +23,8 @@
                 variant="text"
                 class="text-black text-caption"
                 prepend-icon="mdi-cog-outline"
-                :to="{ name: 'settings' }">
+                :to="{ name: 'settings' }"
+              >
                 {{ t("dropdown.settings") }}
               </v-btn>
             </v-list-item>
@@ -33,7 +34,8 @@
                 variant="text"
                 class="text-black text-caption"
                 prepend-icon="mdi-web"
-                @click.stop="dialogLan = true">
+                @click.stop="dialogLan = true"
+              >
                 {{ t("dropdown.language") }}
               </v-btn>
             </v-list-item>
@@ -44,7 +46,8 @@
                 class="text-caption"
                 prepend-icon="mdi-contacts"
                 href="https://fc5b0bc231862.meiqiacloud.com/dist/standalone.html?eid=4dd08bdd638f658e9e9c7689656530f3&language=en"
-                target="_blank">
+                target="_blank"
+              >
                 {{ t("dropdown.contact") }}
               </v-btn>
             </v-list-item>
@@ -55,7 +58,8 @@
                 variant="text"
                 class="text-caption text-red-darken-3"
                 prepend-icon="mdi-logout"
-                @click.stop="handleLogout()">
+                @click.stop="handleLogout()"
+              >
                 {{ t("dropdown.logout") }}
               </v-btn>
 
@@ -64,13 +68,14 @@
                 variant="text"
                 class="text-caption text-green-darken-2"
                 prepend-icon="mdi-login"
-                :to="{ name: 'login' }">
+                :to="{ name: 'login' }"
+              >
                 Login
               </v-btn>
             </v-list-item>
           </v-list>
         </v-menu>
-      </template> -->
+      </template>
 
       <!-- Language dialog -->
       <!-- <v-dialog v-model="dialogLan" scroll-strategy="none" max-width="400">

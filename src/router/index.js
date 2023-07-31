@@ -12,6 +12,8 @@ import Help from "@/components/help/help.vue";
 import Community from "@/components/help/community.vue";
 import PrivacyPolicy from "@/components/help/PrivacyPolicy.vue";
 import TermsofService from "@/components/help/TermsofService.vue";
+import OrderRecords from "@/components/records/OrderRecords.vue";
+import AssetsRecords from "@/components/records/AssetsRecords.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -20,6 +22,16 @@ const router = createRouter({
       path: "/",
       component: Home,
       name: "home",
+    },
+    {
+      path: "/assets-records",
+      component: AssetsRecords,
+      name: "assets-records",
+    },
+    {
+      path: "/order-records",
+      component: OrderRecords,
+      name: "order-records",
     },
     {
       path: "/product",

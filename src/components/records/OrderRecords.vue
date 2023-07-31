@@ -4,6 +4,7 @@
     class="mx-auto my-12 card-border"
     max-width="550"
     color="indigo-darken-4 lighten-2"
+    style="width: 95%"
   >
     <v-tabs v-model="tab">
       <v-tab value="Completed"> 展示中 </v-tab>

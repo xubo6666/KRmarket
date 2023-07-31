@@ -130,7 +130,7 @@
           </v-btn>
         </v-col>
         <v-col cols="4">
-          <v-btn variant="text" size="large"
+          <v-btn variant="text" size="large" :to="{ name: 'assets-records' }"
             ><v-icon
               icon="mdi-file-document"
               style="color: orange; font-size: 25px; position: absolute"
@@ -139,7 +139,7 @@
           </v-btn>
         </v-col>
         <v-col cols="4">
-          <v-btn variant="text" size="large"
+          <v-btn variant="text" size="large" :to="{ name: 'order-records' }"
             ><v-icon
               icon="mdi-text-box-search"
               style="color: orange; font-size: 25px; position: absolute"

@@ -4,7 +4,7 @@
       color="indigo-darken-4
              lighten-2"
       class="mx-auto"
-      max-width="500"
+      max-width="700"
       max-height="mx-auto"
       rounded="xl"
     >
@@ -32,7 +32,7 @@
       :key="level.id"
       variant="outlined"
       class="mx-auto gradient-0 gradient-1 gradient-2 gradient-3 gradient-4"
-      max-width="500"
+      max-width="700"
       max-height="mx-auto"
       :style="{
         margin: '50px auto',

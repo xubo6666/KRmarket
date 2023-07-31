@@ -267,6 +267,8 @@
     "duedate": "DueDate",
     "withdraw": "Withdraw",
     "productinfo": "ProductInfo",
-    "product": "Product"
+    "product": "Product",
+    "order-records": "OrderRecords",
+    "assets-records": "AssetsRecords"
   }
 }

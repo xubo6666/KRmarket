@@ -265,6 +265,8 @@
     "level": "Level",
     "loan": "Loan",
     "duedate": "DueDate",
-    "withdraw": "Withdraw"
+    "withdraw": "Withdraw",
+    "productinfo": "ProductInfo",
+    "product": "Product"
   }
 }

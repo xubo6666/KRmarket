@@ -4,7 +4,7 @@ import Loan from "@/components/Loan.vue";
 import Withdraw from "@/components/Withdraw.vue";
 import DueDate from "@/components/DueDate.vue";
 import ProductInfo from "@/components/product/ProductInfo.vue";
-
+import Product from "@/components/product/Product.vue";
 import Account from "@/components/Account.vue";
 import Level from "@/components/product/Level.vue";
 import Login from "@/components/auth/Login.vue";
@@ -20,6 +20,11 @@ const router = createRouter({
       path: "/",
       component: Home,
       name: "home",
+    },
+    {
+      path: "/product",
+      component: Product,
+      name: "product",
     },
     {
       path: "/productinfo",

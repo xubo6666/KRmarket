@@ -102,39 +102,38 @@
     <v-main class="background"
       ><router-view class="mx-auto px-6 pt-4 pb-15" />
     </v-main>
+    <div v-show="$route.name !== 'login'">
+      <v-footer
+        app
+        fixed
+        color="indigo-darken-4"
+        class="flex justify-space-around"
+      >
+        <v-btn variant="text" class="text-caption" :to="{ name: 'home' }">
+          <v-icon icon="mdi-home-outline" color="blue-grey-lighten-4" />
+          {{ t("footerPanel.home") }}
+        </v-btn>
 
-    <v-footer
-      app
-      fixed
-      color="indigo-darken-4"
-      class="flex justify-space-around"
-    >
-      <v-btn variant="text" class="text-caption" :to="{ name: 'home' }">
-        <v-icon icon="mdi-home-outline" color="blue-grey-lighten-4" />
-        {{ t("footerPanel.home") }}
-      </v-btn>
+        <v-btn variant="text" class="text-caption" :to="{ name: 'level' }"
+          ><v-icon icon="mdi-magnify" color="blue-grey-lighten-4" />
+          {{ t("footerPanel.explore") }}
+        </v-btn>
 
-      <v-btn variant="text" class="text-caption" :to="{ name: 'level' }"
-        ><v-icon icon="mdi-magnify" color="blue-grey-lighten-4" />
-        {{ t("footerPanel.explore") }}
-      </v-btn>
-
-      <v-btn variant="text" class="text-caption" :to="{ name: 'account' }"
-        ><v-icon icon="mdi-account-outline" color="blue-grey-lighten-4" />
-        {{ t("footerPanel.account") }}
-      </v-btn>
-    </v-footer>
+        <v-btn variant="text" class="text-caption" :to="{ name: 'account' }"
+          ><v-icon icon="mdi-account-outline" color="blue-grey-lighten-4" />
+          {{ t("footerPanel.account") }}
+        </v-btn>
+      </v-footer>
+    </div>
   </v-app>
 </template>
 
 <script>
-import { watch } from "vue";
-
 import { useI18n } from "vue-i18n";
+import { watch } from "vue";
 export default {
   setup() {
     const { t, locale } = useI18n();
-
     watch(locale, newLocale => {
       localStorage.setItem("locale", newLocale);
     });

@@ -269,6 +269,7 @@
     "productinfo": "ProductInfo",
     "product": "Product",
     "order-records": "OrderRecords",
-    "assets-records": "AssetsRecords"
+    "assets-records": "AssetsRecords",
+    "login": "Login"
   }
 }

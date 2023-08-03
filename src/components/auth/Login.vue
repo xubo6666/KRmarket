@@ -1,73 +1,20 @@
 <template>
-  <div class="mt-10">
-    <v-card class="mx-auto table-border" max-width="650px" color="transparent">
-      <h1 class="">{{ t("login.title") }}</h1>
-
-      <v-form>
-        <v-responsive class="mx-auto" max-width="600px" width="95%">
-          <v-text-field
-            v-model="loginForm.username"
-            :label="t('login.username') + ' *'"
-            variant="outlined"
-            hide-details="auto"
-            class="mt-5" />
-
-          <v-text-field
-            v-model="loginForm.password"
-            :label="t('login.password') + ' *'"
-            variant="outlined"
-            class="mt-5"
-            :append-inner-icon="
-              showPassword ? 'mdi-eye-outline' : 'mdi-eye-off-outline'
-            "
-            :type="showPassword ? 'text' : 'password'"
-            @click:append-inner="showPassword = !showPassword"
-            hide-details="auto" />
-        </v-responsive>
-      </v-form>
-
-      <div class="text-caption ml-5">
-        {{ t("login.forgotPassword") }}?
-        <a target="_blank" href="https://vuetifyjs.com" @click.stop>{{
-          t("login.tapHere")
-        }}</a>
-      </div>
-
-      <drag-verify
-        :width="275"
-        class="mt-5 mx-auto rounded-lg"
-        progressBarBg="#A191FF"
-        :text="t('slideToVerify')"
-        :successText="t('register.human')"
-        handlerIcon="el-icon-d-arrow-right"
-        successIcon="el-icon-circle-check"></drag-verify>
-      <div class="d-flex justify-center">
-        <v-btn
-          max-width="550px"
-          width="95%"
-          color="black"
-          class="rounded-xl mt-5 text-body-1"
-          >{{ t("login.login") }}</v-btn
-        >
-      </div>
-      <div class="d-flex justify-center">
-        <v-btn
-          max-width="550px"
-          width="95%"
-          color="black"
-          class="rounded-xl mt-5 mb-5 text-body-1"
-          variant="outlined"
-          >{{ t("login.signup") }}</v-btn
-        >
-      </div>
-      <Alert />
-    </v-card>
+  <div class="text-center login-component">
+    <div class="login-content"></div>
+    <MyWeb3ModalButton class="btn rounded-xl" id="my-button"
+      >登入</MyWeb3ModalButton
+    >
   </div>
 </template>
+
 <script>
 import { useI18n } from "vue-i18n";
+import MyWeb3ModalButton from "./MyWeb3ModalButton.vue";
 
 export default {
+  components: {
+    MyWeb3ModalButton,
+  },
   setup() {
     const { t, locale } = useI18n();
     return {
@@ -76,29 +23,34 @@ export default {
     };
   },
   data() {
-    return {
-      loginForm: {
-        username: "",
-        password: "",
-      },
-      account: "",
-      password: "",
-      showPassword: false,
-
-      // Validate rules
-      valid: true,
-      usernameRules: [(v) => !!v || this.t("messages.usernameRequired")],
-      passwordRules: [(v) => !!v || this.t("messages.passwordRequired")],
-
-      // other
-      captchaPassed: false,
-
-      alert: {
-        alertText: "",
-        alertType: "info",
-        show: false,
-      },
-    };
+    return {};
   },
 };
 </script>
+<style scoped lang="scss">
+.login-component {
+  /* 設置背景圖片 */
+  background-size: cover;
+  background-position: top left;
+  background-image: url("login.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.btn {
+  width: 200px;
+  height: 50px;
+  background-image: url("btn.png");
+  background-size: cover;
+  background-position: center;
+}
+</style>

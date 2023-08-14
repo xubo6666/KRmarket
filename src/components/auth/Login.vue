@@ -1,16 +1,15 @@
 <template>
   <div class="text-center login-component">
     <div class="login-content"></div>
-    <MyWeb3ModalButton class="btn rounded-xl" id="my-button"
-      >登入</MyWeb3ModalButton
-    >
+    <MyWeb3ModalButton class="btn rounded-xl" id="my-button">
+      登入
+    </MyWeb3ModalButton>
   </div>
 </template>
 
 <script>
 import { useI18n } from "vue-i18n";
 import MyWeb3ModalButton from "./MyWeb3ModalButton.vue";
-
 export default {
   components: {
     MyWeb3ModalButton,
@@ -21,9 +20,6 @@ export default {
       t,
       locale,
     };
-  },
-  data() {
-    return {};
   },
 };
 </script>

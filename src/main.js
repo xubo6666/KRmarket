@@ -19,7 +19,8 @@ const i18n = createI18n({
   fallbackLocale: "en",
   messages: {
     en: messages.en,
-    zh: messages.zh,
+    kr: messages.kr,
+    jp: messages.jp,
   },
 });
 

@@ -1,20 +1,22 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/components/Home.vue";
-import Loan from "@/components/Loan.vue";
-import Withdraw from "@/components/Withdraw.vue";
-import DueDate from "@/components/DueDate.vue";
-import ProductInfo from "@/components/product/ProductInfo.vue";
-import Product from "@/components/product/Product.vue";
-import Account from "@/components/Account.vue";
-import Level from "@/components/product/Level.vue";
-import Login from "@/components/auth/Login.vue";
-import Help from "@/components/help/help.vue";
-import Community from "@/components/help/community.vue";
-import PrivacyPolicy from "@/components/help/PrivacyPolicy.vue";
-import TermsofService from "@/components/help/TermsofService.vue";
-import OrderRecords from "@/components/records/OrderRecords.vue";
-import AssetsRecords from "@/components/records/AssetsRecords.vue";
-import Settings from "@/components/settings/Settings.vue";
+const Home = () => Promise.resolve(import("@/components/Home.vue"));
+const Loan = () => import("@/components/Loan.vue");
+const Deposit = () => import("@/components/Deposit.vue");
+const Withdraw = () => import("@/components/Withdraw.vue");
+const DueDate = () => import("@/components/DueDate.vue");
+const ProductInfo = () => import("@/components/product/ProductInfo.vue");
+const Product = () => import("@/components/product/Product.vue");
+const Account = () => import("@/components/Account.vue");
+const Level = () => import("@/components/product/Level.vue");
+const Login = () => import("@/components/auth/Login.vue");
+const Help = () => import("@/components/help/help.vue");
+const Community = () => import("@/components/help/community.vue");
+const PrivacyPolicy = () => import("@/components/help/PrivacyPolicy.vue");
+const TermsofService = () => import("@/components/help/TermsofService.vue");
+const OrderRecords = () => import("@/components/records/OrderRecords.vue");
+const AssetsRecords = () => import("@/components/records/AssetsRecords.vue");
+const LoanRecords = () => import("@/components/records/LoanRecords.vue");
+const Settings = () => "@/components/settings/Settings.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -28,6 +30,11 @@ const router = createRouter({
       path: "/settings",
       component: Settings,
       name: "settings",
+    },
+    {
+      path: "/loan-records",
+      component: LoanRecords,
+      name: "loan-records",
     },
     {
       path: "/assets-records",
@@ -99,6 +106,20 @@ const router = createRouter({
       component: TermsofService,
       name: "termsofService",
     },
+    {
+      path: "/deposit",
+      component: Deposit,
+      name: "deposit",
+    },
   ],
 });
+// router.beforeEach(async (to, from, next) => {
+//   if (["login"].includes(to.name) || localStorage.getItem("user")) {
+//     next();
+//   } else {
+//     next({
+//       path: "/login",
+//     });
+//   }
+// });
 export default router;

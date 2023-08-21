@@ -1,16 +1,16 @@
-import { reactive } from "vue";
+import { defineStore } from "pinia";
+import { ref } from "vue";
 
-export const store = reactive({
-  isNavOpen: false,
+const loginStatus = localStorage.getItem("user") ? true : false;
+export const useAuthStore = defineStore("auth", {
+  state: () => {
+    return {
+      loggedIn: ref(loginStatus),
+    };
+  },
+  actions: {
+    changeLoginState(payload) {
+      this.loggedIn = payload;
+    },
+  },
 });
-
-export const mutations = {
-  setIsNavOpen(yesno) {
-    store.isNavOpen = yesno;
-  },
-  toggleNav() {
-    store.isNavOpen = !store.isNavOpen;
-  },
-};
-
-export default { store, mutations };

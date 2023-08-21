@@ -281,7 +281,8 @@
     "usdtBalance": "USDT残高",
     "cumulativeProfits": "累計利益",
     "profitToday": "今日の利益",
-    "usdtWithdraw": "USDT引き出し"
+    "usdtWithdraw": "USDT引き出し",
+    "loanRecords": "ローン記録"
   },
 
   "routes": {
@@ -317,7 +318,6 @@
     "biddingBalance": "入札可能な残高",
     "availableBalance": "利用可能な残高"
   },
-
   "dueDate": {
     "userLoan": "ユーザーのローン",
     "loanMoney": "ローン金額",
@@ -336,6 +336,13 @@
   "assets-records": {
     "withdrawal": "引き出し ",
     "deposit": "預入れ",
-    "orderRecord": "注文記録"
+    "orderRecord": "注文記録",
+    "success": "成功"
+  },
+  "productInfo": {
+    "price": "価格",
+    "returnRate": "収益率",
+    "address": "住所",
+    "bidding": "競争入札"
   }
 }

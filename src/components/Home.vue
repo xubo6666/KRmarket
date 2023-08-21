@@ -59,7 +59,7 @@
       <h2 class="text-black text-center mt-5">{{ $t("home.title-4") }}</h2>
     </div>
     <v-container class="d-flex justify-center mt-5">
-      <v-card max-width="350" class="mx-auto rounded-sm">
+      <v-card min-width="500" class="mx-auto rounded-sm">
         <v-carousel
           cycle
           hide-delimiter-background
@@ -109,6 +109,7 @@
         </v-carousel>
       </v-card>
     </v-container>
+    <!--  -->
     <div class="d-flex justify-center">
       <!-- user 4 help -->
       <v-card
@@ -239,7 +240,27 @@ export default {
   },
   data() {
     return {
-      productCarousel: [],
+      productCarousel: [
+        {
+          img_url: "test1.jpg",
+          title: "Product Title 1",
+          author: "Author 1",
+          description: "Description for Product 1",
+        },
+        {
+          img_url: "test2.jpeg",
+          title: "Product Title 2",
+          author: "Author 2",
+          description: "Description for Product 2",
+        },
+        {
+          img_url: "test3.png",
+          title: "Product Title 3",
+          author: "Author 3",
+          description: "Description for Product 3",
+        },
+      ],
+
       productImg: [
         [
           "NFT/1-1.jpeg",
@@ -682,4 +703,10 @@ export default {
 
 .img-group-3
   animation: traveling 70s linear reverse infinite
+  // ANIME
+@keyframes traveling
+  from
+    transform: translateX(0px)
+  to
+    transform: translateX(2000px)
 </style>

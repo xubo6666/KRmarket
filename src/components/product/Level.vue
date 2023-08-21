@@ -10,19 +10,19 @@
     >
       <v-row class="text-center mt-3 mb-3">
         <v-col cols="6">
-          <v-card-subtitle>拍賣中</v-card-subtitle>
+          <v-card-subtitle>{{ t("level.inAuction") }}</v-card-subtitle>
           <div>123</div>
         </v-col>
         <v-col cols="6">
-          <v-card-subtitle>今日收益</v-card-subtitle>
+          <v-card-subtitle>{{ t("level.todayEarnings") }}</v-card-subtitle>
           <div>567</div>
         </v-col>
         <v-col cols="6">
-          <v-card-subtitle>競標可用餘額</v-card-subtitle>
+          <v-card-subtitle>{{ t("level.biddingBalance") }}</v-card-subtitle>
           <div>789</div>
         </v-col>
         <v-col cols="6">
-          <v-card-subtitle>可用餘額</v-card-subtitle>
+          <v-card-subtitle>{{ t("level.availableBalance") }}</v-card-subtitle>
           <div>0123</div>
         </v-col>
       </v-row>

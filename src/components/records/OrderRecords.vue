@@ -7,10 +7,10 @@
     style="width: 95%"
   >
     <v-tabs v-model="tab">
-      <v-tab value="Completed"> 展示中 </v-tab>
-      <v-tab value="On display"> 任務中 </v-tab>
-      <v-tab value="Assignment"> 已結束 </v-tab>
-      <v-tab value="Failed"> 全部 </v-tab>
+      <v-tab value="Completed"> {{ t("order-records.onDisplay") }} </v-tab>
+      <v-tab value="On display">{{ t("order-records.onTask") }} </v-tab>
+      <v-tab value="Assignment"> {{ t("order-records.completed") }} </v-tab>
+      <v-tab value="Failed"> {{ t("order-records.all") }} </v-tab>
     </v-tabs>
     <v-window v-model="tab">
       <v-window-item value="Completed">
@@ -18,14 +18,14 @@
           <tbody>
             <tr>
               <td>
-                <v-img src=/test22.jpeg alt="imgae" width="50" height="75" />
+                <v-img src=/test2.jpeg alt="imgae" width="50" height="75" />
               </td>
               <td>100USDT</td>
               <td class="text-grey">07-07 23:59</td>
             </tr>
             <tr>
               <td>
-                <v-img src=/test22.jpeg alt="imgae" width="50" height="75" />
+                <v-img src=/test2.jpeg alt="imgae" width="50" height="75" />
               </td>
               <td>100USDT</td>
               <td class="text-grey">07-07 23:59</td>

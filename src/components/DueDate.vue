@@ -7,25 +7,27 @@
       max-width="700"
       style="padding: 20px"
     >
-      <v-card-title class="text-orange"> 用戶借貸 </v-card-title>
+      <v-card-title class="text-orange">
+        {{ t("dueDate.userLoan") }}
+      </v-card-title>
 
       <v-windows class="mx-auto">
         <v-table>
           <td>
-            <div class="text-red">借貸金額</div>
-            <div>5000USDT</div>
+            <div class="text-red ml-3">{{ t("dueDate.loanMoney") }}</div>
+            <div class="ml-3">5000USDT</div>
           </td>
           <td>
-            <div class="text-red">借款日</div>
+            <div class="text-red">{{ t("dueDate.loanIssueDate") }}</div>
             <div>07-07</div>
           </td>
           <td>
-            <div class="text-red">還款日</div>
+            <div class="text-red">{{ t("dueDate.dueDate") }}</div>
             <div>07-07</div>
           </td>
           <td>
-            <div class="text-red">審核狀態</div>
-            <div>已通過</div>
+            <div class="text-red">{{ t("dueDate.reviewStatus") }}</div>
+            <div>{{ t("dueDate.passed") }}</div>
           </td>
         </v-table>
       </v-windows>
@@ -43,7 +45,7 @@
           background-position: center;
         "
       >
-        還款
+        {{ t("dueDate.repayment") }}
       </v-btn>
     </v-card>
   </v-container>

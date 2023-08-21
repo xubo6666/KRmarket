@@ -7,10 +7,10 @@
       max-width="700"
       style="padding: 20px"
     >
-      <v-card-title class="text-orange">申請貸款</v-card-title>
+      <v-card-title class="text-orange">{{ t("loan.title") }}</v-card-title>
       <v-select
         v-model="loan.duration"
-        label="時長"
+        :label="t('loan.duration')"
         variant="outlined"
         :items="durationOptions"
         item-title="text"
@@ -18,13 +18,13 @@
       />
       <v-text-field
         v-model="loan.amount"
-        label="金額"
+        :label="t('loan.amount')"
         variant="outlined"
         autocomplete="off"
         placeholder="50 ~ 10000000 ETH"
       />
       <v-card-text class="text-red text-center"
-        >尊敬的NFT用戶,請聯繫您的專屬客服,否則您的申請可能被駁回,謝謝。
+        >{{ t("loan.forUser") }}
       </v-card-text>
       <v-card rounded="lg" color="grey-lighten-2">
         <v-card-text>

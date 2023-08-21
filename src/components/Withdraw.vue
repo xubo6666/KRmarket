@@ -7,7 +7,9 @@
       style="padding: 20px"
       rounded="xl"
     >
-      <v-card-subtitle class="mt-5"> 您的USDT餘額 </v-card-subtitle>
+      <v-card-subtitle class="mt-5">
+        {{ t("withdraw.usdtBalance") }}
+      </v-card-subtitle>
       <div class="d-flex align-center mt-5">
         <div class="d-flex align-center">
           <v-img src="./usdt.png" width="20" height="20" />
@@ -16,7 +18,7 @@
       </div>
     </v-card>
     <div class="text-center text-white mt-5 mb-5" style="font-size: 16px">
-      手續費1.00%
+      {{ t("withdraw.handlingFee") }}1.00%
     </div>
     <v-card
       class="mx-auto"
@@ -25,7 +27,7 @@
       style="padding: 20px"
       rounded="xl"
     >
-      <v-card-subtitle> 請輸入您要提領的USDT </v-card-subtitle>
+      <v-card-subtitle> {{ t("withdraw.usdtEnter") }} </v-card-subtitle>
       <v-text-field v-model="amount" prepend-inner class="mt-5 pl-10 pr-10">
         <template v-slot:prepend-inner>
           <v-img src="./usdt.png" width="20" height="20" />
@@ -41,7 +43,7 @@
             background-size: cover;
             background-position: center;
           "
-          >提取所有USDT</v-btn
+          >{{ t("withdraw.usdtAll") }}</v-btn
         >
       </div>
     </v-card>
@@ -63,7 +65,7 @@
         background-position: center;
       "
     >
-      確定
+      {{ t("withdraw.confirm") }}
     </v-btn>
   </v-container>
 </template>

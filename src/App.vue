@@ -1,4 +1,5 @@
 <template>
+  d5dcae4b223356c9fc7b18d95f634f46
   <v-app id="v-app">
     <v-app-bar flat color="indigo-darken-4">
       <v-btn @click="$router.go(-1)">
@@ -58,9 +59,9 @@
                 variant="text"
                 class="text-caption text-red-darken-3"
                 prepend-icon="mdi-logout"
-                @click.stop="handleLogout()"
+                @click.stop="handleDisconnect()"
               >
-                {{ t("dropdown.logout") }}
+                登出
               </v-btn>
 
               <v-btn
@@ -78,7 +79,7 @@
       </template>
 
       <!-- Language dialog -->
-      <!-- <v-dialog v-model="dialogLan" scroll-strategy="none" max-width="400">
+      <v-dialog v-model="dialogLan" scroll-strategy="none" max-width="400">
         <v-card>
           <v-card-title class="text-h6">
             {{ t("dropdown.language") }}
@@ -95,9 +96,10 @@
             @update:modelValue="
               dialogLan = false;
               dropdown = false;
-            " />
+            "
+          />
         </v-card>
-      </v-dialog> -->
+      </v-dialog>
     </v-app-bar>
     <v-main class="background"
       ><router-view class="mx-auto px-6 pt-4 pb-15" />
@@ -129,6 +131,9 @@
 </template>
 
 <script>
+import { disconnect } from "@wagmi/core";
+import { useAuthStore } from "@/store/auth.js";
+import { mapState } from "pinia";
 import { useI18n } from "vue-i18n";
 import { watch } from "vue";
 export default {
@@ -137,7 +142,6 @@ export default {
     watch(locale, newLocale => {
       localStorage.setItem("locale", newLocale);
     });
-
     return {
       t,
       locale,
@@ -147,8 +151,10 @@ export default {
     return {
       localeOptions: [
         { text: "English", value: "en" },
-        { text: "Chinese", value: "zh" },
+        { text: "Korean", value: "kr" },
+        { text: "Japan", value: "jp" },
       ],
+      loggedIn: true,
       dropdown: false,
       dialogLan: false,
       dialogAnnounce: false,
@@ -163,6 +169,52 @@ export default {
       welcomeOut: false,
       windowWidth: window.innerWidth,
     };
+  },
+  computed: {
+    ...mapState(useAuthStore, ["loggedIn"]),
+  },
+  watch: {
+    language() {
+      this.dialogLan = false;
+    },
+    $route(to) {
+      if (!["login"].includes(to.name)) {
+        this.setTimer();
+      }
+      if (to.name == "home") {
+        // this.dialogAnnounce = true;
+      }
+    },
+  },
+  methods: {
+    handleDisconnect() {
+      const authStore = useAuthStore();
+      localStorage.removeItem("user");
+      authStore.changeLoginState(false);
+      this.dropdown = false;
+      disconnect();
+      this.$router.push("/login");
+    },
+    handleInactive() {
+      window.alert("You are logged out due to inactivity");
+      this.handleDisconnect();
+    },
+    startTimer() {
+      this.timeout = setTimeout(() => {
+        this.handleInactive();
+        this.handleLogout();
+      }, this.timeoutInMs);
+    },
+    resetTimer() {
+      clearTimeout(this.timeout);
+      this.startTimer();
+    },
+    setTimer() {
+      document.addEventListener("keypress", this.resetTimer, false);
+      document.addEventListener("mousemove", this.resetTimer, false);
+      document.addEventListener("mousedown", this.resetTimer, false);
+      document.addEventListener("touchmove", this.resetTimer, false);
+    },
   },
 };
 </script>

@@ -271,6 +271,7 @@
     "customerService": "Customer Service",
     "orderRecords": "Order Records",
     "assetsRecords": "Assets Records",
+    "loanRecords": "Loan Records",
     "available": "Quantity Available",
     "auction": "Auction",
     "bidBalance": "Bid Balance",
@@ -334,6 +335,13 @@
   "assets-records": {
     "withdrawal": "Withdrawal",
     "deposit": "Deposit",
-    "orderRecord": "OrderRecords"
+    "orderRecord": "OrderRecords",
+    "success": "Success"
+  },
+  "productInfo": {
+    "price": "Price",
+    "returnRate": "Yield or Return Rate",
+    "address": "Address",
+    "bidding": "Bidding"
   }
 }

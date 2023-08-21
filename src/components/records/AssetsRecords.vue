@@ -7,9 +7,9 @@
     style="width: 95%"
   >
     <v-tabs v-model="tab">
-      <v-tab value="Withdraw"> 提款 </v-tab>
-      <v-tab value="Deposit"> 充值 </v-tab>
-      <v-tab value="Order"> 訂單記錄 </v-tab>
+      <v-tab value="Withdraw"> {{ t("assets-records.withdrawal") }} </v-tab>
+      <v-tab value="Deposit"> {{ t("assets-records.deposit") }} </v-tab>
+      <v-tab value="Order"> {{ t("assets-records.orderRecord") }} </v-tab>
     </v-tabs>
     <v-window v-model="tab">
       <v-window-item value="Withdraw">
@@ -19,7 +19,7 @@
               <td>USDT</td>
               <td>151</td>
               <td class="text-grey">07-07 23:59</td>
-              <td class="text-green">成功</td>
+              <td class="text-green">{{ t("assets-records.success") }}</td>
             </tr>
           </tbody>
         </v-table></v-window-item
@@ -32,7 +32,7 @@
               <td>USDT</td>
               <td>151</td>
               <td class="text-grey">07-07 23:59</td>
-              <td class="text-green">成功</td>
+              <td class="text-green">{{ t("assets-records.success") }}</td>
             </tr>
           </tbody>
         </v-table></v-window-item

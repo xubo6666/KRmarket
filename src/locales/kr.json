@@ -344,7 +344,8 @@
     "usdtBalance": "USDT 잔액",
     "cumulativeProfits": "누적 수익",
     "profitToday": "오늘의 수익",
-    "usdtWithdraw": "USDT 출금"
+    "usdtWithdraw": "USDT 출금",
+    "loanRecords": "대출 기록"
   },
   "dropdown": {
     "settings": "설정",
@@ -395,6 +396,13 @@
   "assets-records": {
     "withdrawal": "출금",
     "deposit": "충전 ",
-    "orderRecord": " 주문 기록"
+    "orderRecord": " 주문 기록",
+    "success": "성공"
+  },
+  "productInfo": {
+    "price": "가격",
+    "returnRate": "수익률",
+    "address": "주소",
+    "bidding": "경매"
   }
 }

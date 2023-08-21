@@ -7,7 +7,7 @@
         max-height="mx-auto"
         max-width="500"
       >
-        <v-img src="/test22.jpeg" alt="image" max-width="500"></v-img>
+        <v-img src="/test2.jpeg" alt="image" max-width="500"></v-img>
         <div class="text-center">
           <v-card-title class="">Nijai Dog #0487</v-card-title>
           <v-card-subtitle class="text-center"
@@ -54,24 +54,37 @@
         </div>
         <v-divider class="border-opacity-100 mb-3" color="warning"></v-divider>
         <div class="d-flex justify-space-between mb-2">
-          <div class="text-caption">價格</div>
+          <div class="text-caption">{{ t("productInfo.price") }}</div>
           <div>3000USDT</div>
         </div>
         <div class="d-flex justify-space-between mb-2">
-          <div class="text-caption">收益率</div>
+          <div class="text-caption">{{ t("productInfo.returnRate") }}</div>
           <div>0.88USDT</div>
         </div>
         <div class="mb-2">
-          <div class="text-caption">地址</div>
+          <div class="text-caption">{{ t("productInfo.address") }}</div>
           <div class="text-caption">
             0x19b86299c21505cdf59ce63740b240a9c822b5e4
             <v-icon icon="mdi-view-day-outline" />
           </div>
         </div>
       </v-card>
-      <v-btn block color="black" rounded="lg" class="btn-custom mt-6"
-        >競標</v-btn
-      >
+      <v-btn block color="black" rounded="lg" class="btn-custom mt-6">{{
+        t("productInfo.bidding")
+      }}</v-btn>
     </v-card>
   </v-container>
 </template>
+<script>
+import { useI18n } from "vue-i18n";
+
+export default {
+  setup() {
+    const { t, locale } = useI18n();
+    return {
+      t,
+      locale,
+    };
+  },
+};
+</script>
